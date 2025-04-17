@@ -1,3 +1,31 @@
-.colorAzul {
-  color:blue;
+body {
+  color: #502314;
+  background-color: #f5ebdc;
+}
+
+.fondoBK {
+  background-color: #2b0200;
+}
+
+.fondoBK2 {
+  background-color: #f5ebdc;
+}
+
+.colorBk {
+  color:#502314;
+}
+
+.linkBK {
+  color: #502314;
+  font-weight: bold;
+}
+
+.footerBK {
+  color: #8a6c60;
+  background-color: #2b0200;
+}
+
+.botonBK {
+  color:white;
+  background-color: #d62300;
 }

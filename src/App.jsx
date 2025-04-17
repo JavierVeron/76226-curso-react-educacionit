@@ -1,15 +1,37 @@
-import Calculator from "./Clase3/Calculator"
-import Formularios from "./Clase3/Formularios"
-import RenderizadoCondicional from "./Clase3/RenderizadoCondicional"
-import RenderizadoListas from "./Clase3/RenderizadoListas"
+import { Routes, Route, useRoutes } from "react-router-dom" 
+import Header from "./Clase4/Header"
+import Footer from "./Clase4/Footer"
+import Principal from "./Clase4/Principal"
+import MiBK from "./Clase4/MiBK"
+import Productos from "./Clase4/Productos"
+import Item from "./Clase4/Item"
 
 function App() {
+  /* const routes = useRoutes([
+    {path:"/", element:<Principal />},
+    {path:"/productos", element:<Productos />},
+    {path:"/mi-bk", element:<MiBK estaLogueado={true} />}
+  ]);
+
   return (
     <>
-      {/* <Calculator /> */}
-      {/* <Formularios /> */}
-      {/* <RenderizadoCondicional isLoggedIn={false} /> */}
-      <RenderizadoListas />
+      <Header />
+      {routes}
+      <Footer />
+    </>
+  ) */
+
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path={"/"} element={<Principal />} />
+        <Route path={"/productos"} element={<Productos />} />
+        <Route path={"/categoria/:id"} element={<Productos />} />
+        <Route path={"/mi-bk"} element={<MiBK estaLogueado={true} />} />
+        <Route path={"/item/:id"} element={<Item />} />
+      </Routes>
+      <Footer />
     </>
   )
 }
