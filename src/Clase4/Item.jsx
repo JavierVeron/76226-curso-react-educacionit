@@ -1,7 +1,10 @@
 import { useParams } from "react-router-dom"
 import productosJson from "./json/productos.json"
+import { useContext } from "react";
+import { CartContext } from "../Clase5/context/CartContext";
 
 const Item = () => {
+    const {agregarProducto} = useContext(CartContext);
     const {id} = useParams();
     const producto = productosJson.find(item => item.id == id);
 
@@ -16,7 +19,7 @@ const Item = () => {
                         <h1 className="fw-bold">{producto.nombre}</h1>
                         <p className="fw-bold">{producto.descripcion}</p>
                         <p className="fw-bold">${producto.precio}</p>
-                        <p><button className="btn botonBK">Agregar al Carrito</button></p>
+                        <p><button className="btn botonBK" onClick={() => {agregarProducto(producto.id)}}>Agregar al Carrito</button></p>
                     </div>
                 </div>
             </div>
