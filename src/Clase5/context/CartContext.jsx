@@ -13,7 +13,6 @@ const CartContextProvider = ({children}) => {
 
     const eliminarProducto = (id) => {
         let productosFiltro = cart.filter(item => item.id != id);
-        console.log(productosFiltro);
         setCart(productosFiltro);
     }
 

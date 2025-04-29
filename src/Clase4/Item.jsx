@@ -1,12 +1,21 @@
 import { useParams } from "react-router-dom"
-import productosJson from "./json/productos.json"
+//import productosJson from "./json/productos.json"
 import { useContext } from "react";
 import { CartContext } from "../Clase5/context/CartContext";
+import { AGREGAR_PRODUCTO } from "../Clase7/Redux/ActionsCartReducer";
+import { useDispatch, useSelector } from "react-redux";
 
 const Item = () => {
-    const {agregarProducto} = useContext(CartContext);
+    //const {agregarProducto} = useContext(CartContext);
     const {id} = useParams();
-    const producto = productosJson.find(item => item.id == id);
+    //const producto = productosJson.find(item => item.id == id);
+    const productos = useSelector(state => state.products);
+    const producto = productos.find(item => item.id == id);
+    const dispatch = useDispatch();
+
+    const agregarProducto = (id) => {        
+        dispatch(AGREGAR_PRODUCTO(id));
+    }
 
     return (
         <div className="container my-5">

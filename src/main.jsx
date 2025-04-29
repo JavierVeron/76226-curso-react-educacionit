@@ -1,6 +1,10 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { BrowserRouter } from "react-router-dom"
+import { Provider } from "react-redux"
+import { createStore } from 'redux'
+import CartReducer from './Clase7/Redux/CartReducer.jsx'
 
-createRoot(document.getElementById('root')).render(<BrowserRouter><App /></BrowserRouter>)
+const store = createStore(CartReducer);
+
+createRoot(document.getElementById('root')).render(<Provider store={store}><App /></Provider>)
