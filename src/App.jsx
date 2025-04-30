@@ -8,8 +8,7 @@ import Item from "./Clase4/Item"
 import ThemeContextProvider from "./Clase5/context/ThemeContext"
 import CartContextProvider from "./Clase5/context/CartContext"
 import Carrito from "./Clase5/Carrito"
-import Contador from "./Clase7/Contador"
-import Tareas from "./Clase7/Tareas"
+//import Contador from "./Clase8/Contador"
 
 function App() {
   return (
@@ -29,7 +28,6 @@ function App() {
             <Footer />
 
             {/* <Contador /> */}
-            {/* <Tareas /> */}
           </BrowserRouter>
         </ThemeContextProvider>
       </CartContextProvider>
