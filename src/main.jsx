@@ -4,6 +4,7 @@ import App from './App.jsx'
 import { Provider } from "react-redux"
 import { createStore, applyMiddleware } from 'redux'
 import CounterReducer from './Clase8/Redux/CounterReducer.jsx'
+import CartReducer from './Clase7/Redux/CartReducer.jsx'
 
 const miMiddleware = store => next => action => {
     console.log(store.getState());
@@ -20,6 +21,8 @@ const miMiddleware = store => next => action => {
     next(action);
 }
 
-const store = createStore(CounterReducer, applyMiddleware(miMiddleware));
+// Ejemplo con Middleware
+//const store = createStore(CounterReducer, applyMiddleware(miMiddleware));
+const store = createStore(CartReducer);
 
 createRoot(document.getElementById('root')).render(<Provider store={store}><App /></Provider>)
