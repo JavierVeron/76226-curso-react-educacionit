@@ -11,3 +11,18 @@ export const ELIMINAR_PRODUCTO = (id) => ({
 export const VACIAR_CARRITO = ({
     type:"VACIAR_CARRITO"
 })
+
+export const INCREMENTAR_ITEM = (id) => ({
+    type:"INCREMENTAR_ITEM",
+    payload:id
+})
+
+export const DECREMENTAR_ITEM = (id) => ({
+    type:"DECREMENTAR_ITEM",
+    payload:id
+})
+
+export const GENERAR_ORDEN = (orden) => ({
+    type:"GENERAR_ORDEN",
+    payload:orden
+})

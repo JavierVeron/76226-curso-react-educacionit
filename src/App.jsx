@@ -8,6 +8,8 @@ import Item from "./Clase4/Item"
 import ThemeContextProvider from "./Clase5/context/ThemeContext"
 import CartContextProvider from "./Clase5/context/CartContext"
 import Carrito from "./Clase5/Carrito"
+import Checkout from "./Clase8/Checkout"
+import Ordenes from "./Clase8/Ordenes"
 //import Contador from "./Clase8/Contador"
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
               <Route path={"/mi-bk"} element={<MiBK estaLogueado={true} />} />
               <Route path={"/item/:id"} element={<Item />} />
               <Route path={"/carrito"} element={<Carrito />} />
+              <Route path={"/checkout"} element={<Checkout />} />
+              <Route path={"/ordenes"} element={<Ordenes />} />
             </Routes>
             <Footer />
 
